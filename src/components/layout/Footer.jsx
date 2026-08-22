@@ -51,6 +51,20 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+
+            <h2 className="mb-3 mt-6 text-xs font-semibold uppercase tracking-[0.12em] text-accent-licht">
+              Kennis
+            </h2>
+            <ul className="grid gap-2">
+              <li>
+                <Link
+                  to="/geriatrisch-daghospitaal"
+                  className="no-underline hover:text-white hover:underline"
+                >
+                  Geriatrisch daghospitaal
+                </Link>
+              </li>
+            </ul>
           </nav>
 
           <div>
