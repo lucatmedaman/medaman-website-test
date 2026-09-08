@@ -20,7 +20,7 @@ export default function Footer() {
           <img
             src="/images/badge-eihd.png"
             alt="Member of The European Institute For Innovation Through Health Data"
-            className="h-10 w-auto"
+            className="h-16 w-auto"
           />
         </div>
         <div className="mx-auto mt-6 w-full max-w-[1160px] px-4 sm:px-6">
