@@ -27,17 +27,51 @@ export default function Home() {
             MEDAMAN
           </h1>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Knop to="/wie-is-medaman#over-ons" className="!bg-primair-licht !border-primair-licht">
-              Wie is Medaman
-            </Knop>
-            <Knop to="/contact" variant="lijnOpDonker">
+            <Knop to="/contact" className="!bg-primair-licht !border-primair-licht">
               Contact us
             </Knop>
           </div>
         </div>
       </section>
 
-      <Sectie variant="zacht">
+      <Sectie variant="zacht" id="over-ons">
+        <div className="mb-10 text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-accent sm:text-5xl">
+            OVER ONS
+          </h2>
+          <p className="mt-3 text-xl text-gedempt">Wie we zijn en wat we doen</p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          <div className="space-y-6 lg:order-1">
+            <p className="text-gedempt">
+              MEDAMAN is een organisatie die diensten verleent aan ziekenhuizen die
+              innovatie naar een nog hoger niveau willen brengen. Uit gestructureerde
+              ziekenhuisgegevens die in verschillende bronnen beschikbaar zijn, wordt de
+              meest relevante informatie voor zorgverleners gecreëerd. Deze worden snel
+              en op een gebruiksvriendelijke manier ter beschikking gesteld met het oog
+              op kwaliteitsvollere zorg.
+            </p>
+            <p className="text-gedempt">
+              Het bedrijf werd reeds opgericht in 2019 door Dr. Luc Belmans, een arts
+              die reeds zijn sporen verdiend heeft in het ziekenhuisbeheer! De diensten
+              van MEDAMAN omvatten een volledige ondersteuning van de
+              zorgregistratiecyclus.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-md border border-rand lg:order-2">
+            <img
+              src="/images/over-ons-laptop.jpg"
+              alt="Arts typt op een laptop, met rapportages en een stethoscoop op tafel"
+              className="h-full w-full object-cover"
+              width="1600"
+              height="1064"
+            />
+          </div>
+        </div>
+      </Sectie>
+
+      <Sectie>
         <SectieKop
           eyebrow="Expertise"
           titel="Hoe kunnen wij u helpen"
