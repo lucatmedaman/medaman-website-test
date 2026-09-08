@@ -112,6 +112,59 @@ export default function Home() {
         </div>
       </Sectie>
 
+      <Sectie variant="zacht">
+        <div className="mb-10 text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-accent sm:text-5xl">
+            MISSIE &amp; VISIE
+          </h2>
+          <p className="mt-3 text-xl text-gedempt">Onze focus</p>
+        </div>
+
+        <div className="grid gap-10">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div className="overflow-hidden rounded-md border border-rand lg:order-1">
+              <img
+                src="/images/missie-armen.jpg"
+                alt="Zorgverlener met gekruiste armen en stethoscoop"
+                className="h-full w-full object-cover"
+                width="1600"
+                height="1067"
+              />
+            </div>
+            <div className="lg:order-2">
+              <h3 className="mb-2 text-2xl font-semibold text-primair">Onze Missie</h3>
+              <p className="text-gedempt">
+                Faciliteren van hoogkwalitatieve ziekenhuiszorg aan lagere kosten
+                resulterend in voordelen voor ziekenhuis, arts en patiënt dankzij state
+                of the art codering, analyse van ziekenhuisgegevens en vergelijkingen
+                met peers.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div className="lg:order-1">
+              <h3 className="mb-2 text-2xl font-semibold text-primair">Onze Visie</h3>
+              <p className="text-gedempt">
+                Het potentieel van beschikbare ziekenhuisgegevens ontsluiten voor
+                innovatieve zorginstellingen. Door op een veilige en anonieme wijze
+                zorgprocessen te toetsen met peers verhogen ziekenhuizen hun kennis over
+                de zorg met meer doelgerichte patiëntenzorg tot gevolg.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-md border border-rand lg:order-2">
+              <img
+                src="/images/visie-team.jpg"
+                alt="Drie zorgverleners bekijken samen medische beeldvorming"
+                className="h-full w-full object-cover"
+                width="1600"
+                height="1068"
+              />
+            </div>
+          </div>
+        </div>
+      </Sectie>
+
       <CTA />
     </>
   );
