@@ -14,31 +14,25 @@ export default function Home() {
 
   return (
     <>
-      <section className="border-b border-rand bg-gradient-to-b from-[#FBFCFD] to-white py-14 md:py-20 lg:py-24">
-        <div className="mx-auto grid w-full max-w-[1160px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
-            <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.12em] text-accent">
-              MEDAMAN
-            </span>
-            <h1 className="max-w-[19ch] text-4xl font-semibold leading-tight tracking-tight text-primair text-balance sm:text-5xl">
-              Ontsluit het potentiëel van uw ziekenhuisgegevens!
-            </h1>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Knop to="/wie-is-medaman#over-ons">Wie is Medaman</Knop>
-              <Knop to="/contact" variant="secundair">
-                Contact
-              </Knop>
-            </div>
-          </div>
-
-          <div className="overflow-hidden rounded-md border border-rand">
-            <img
-              src="/images/hero-arts-tablet.jpg"
-              alt="Arts bekijkt ziekenhuisgegevens op een tablet"
-              className="h-full w-full object-cover"
-              width="1600"
-              height="1063"
-            />
+      <section
+        className="relative flex min-h-[420px] items-center bg-cover bg-center py-16 md:min-h-[520px] md:py-24"
+        style={{ backgroundImage: "url(/images/hero-arts-tablet.jpg)" }}
+      >
+        <div className="absolute inset-0 bg-[#1B2A33]/60" aria-hidden="true" />
+        <div className="relative mx-auto w-full max-w-[1160px] px-4 text-center sm:px-6">
+          <span className="mb-3 block text-sm font-medium uppercase tracking-[0.12em] text-white/85">
+            Ontsluit het potentiëel van uw ziekenhuisgegevens!
+          </span>
+          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl">
+            MEDAMAN
+          </h1>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Knop to="/wie-is-medaman#over-ons" className="!bg-primair-licht !border-primair-licht">
+              Wie is Medaman
+            </Knop>
+            <Knop to="/contact" variant="lijnOpDonker">
+              Contact us
+            </Knop>
           </div>
         </div>
       </section>
