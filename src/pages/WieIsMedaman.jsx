@@ -5,6 +5,7 @@ import Kaart from "../components/ui/Kaart";
 import CTA from "../components/CTA";
 import useDocumentTitel from "../hooks/useDocumentTitel";
 import { diensten, voordelen, slotpunten } from "../data/diensten";
+import { Check } from "lucide-react";
 
 export default function WieIsMedaman() {
   useDocumentTitel(
@@ -78,7 +79,7 @@ export default function WieIsMedaman() {
         <ul className="grid gap-3 sm:grid-cols-2">
           {voordelen.map((v) => (
             <li key={v} className="flex gap-3 text-[0.95rem] text-gedempt">
-              <span className="mt-[0.7em] h-0.5 w-2 flex-none bg-accent" aria-hidden="true" />
+              <Check className="mt-0.5 h-4 w-4 flex-none text-gedempt" strokeWidth={2} aria-hidden="true" />
               <span>{v}</span>
             </li>
           ))}
@@ -108,14 +109,25 @@ export default function WieIsMedaman() {
           </div>
         </div>
 
-        <ul className="mt-10 grid gap-3 border-t border-rand pt-8">
-          {slotpunten.map((p) => (
-            <li key={p} className="flex gap-3 text-[0.95rem] text-gedempt">
-              <span className="mt-[0.7em] h-0.5 w-2 flex-none bg-accent" aria-hidden="true" />
-              <span>{p}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-10 grid gap-8 border-t border-rand pt-8 lg:grid-cols-2 lg:items-center">
+          <ul className="grid gap-4">
+            {slotpunten.map((p) => (
+              <li key={p} className="flex gap-3 text-[0.95rem] text-gedempt">
+                <Check className="mt-0.5 h-4 w-4 flex-none text-gedempt" strokeWidth={2} aria-hidden="true" />
+                <span>{p}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="overflow-hidden rounded-md border border-rand">
+            <img
+              src="/images/visie-team.jpg"
+              alt="Drie zorgverleners bekijken samen medische beeldvorming"
+              className="h-full w-full object-cover"
+              width="1600"
+              height="1068"
+            />
+          </div>
+        </div>
       </Sectie>
 
       <CTA />
