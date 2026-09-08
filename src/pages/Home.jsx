@@ -1,10 +1,11 @@
 import Sectie from "../components/ui/Sectie";
 import Kaart from "../components/ui/Kaart";
 import Knop from "../components/ui/Knop";
-import CTA from "../components/CTA";
+import ContactFormulier from "../components/ContactFormulier";
 import useDocumentTitel from "../hooks/useDocumentTitel";
 import { diensten } from "../data/diensten";
-import { Smartphone, PanelTop, Paintbrush, Puzzle } from "lucide-react";
+import { site } from "../data/site";
+import { Smartphone, PanelTop, Paintbrush, Puzzle, Phone, Mail } from "lucide-react";
 
 /** Iconen zoals op de live site, per dienst-slug. */
 const EXPERTISE_ICONS = {
@@ -165,7 +166,37 @@ export default function Home() {
         </div>
       </Sectie>
 
-      <CTA />
+      <Sectie id="contact">
+        <div className="mb-10 text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-accent sm:text-5xl">
+            CONTACT
+          </h2>
+          <p className="mt-3 text-xl text-gedempt">
+            Contacteer ons nu voor meer informatie!
+          </p>
+        </div>
+
+        <div className="mx-auto mb-12 grid max-w-xl gap-10 text-center sm:grid-cols-2">
+          <div>
+            <Phone className="mx-auto h-10 w-10 text-rand-sterk" strokeWidth={1.5} aria-hidden="true" />
+            <h3 className="mt-3 text-lg font-semibold text-primair">BEL ONS</h3>
+            <a href={`tel:${site.contact.telefoon.replace(/\s/g, "")}`} className="text-gedempt underline">
+              {site.contact.telefoon}
+            </a>
+          </div>
+          <div>
+            <Mail className="mx-auto h-10 w-10 text-rand-sterk" strokeWidth={1.5} aria-hidden="true" />
+            <h3 className="mt-3 text-lg font-semibold text-primair">E-MAIL</h3>
+            <a href={`mailto:${site.contact.email}`} className="text-gedempt underline">
+              {site.contact.email}
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-[560px]">
+          <ContactFormulier />
+        </div>
+      </Sectie>
     </>
   );
 }
