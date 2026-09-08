@@ -13,9 +13,17 @@
     @apply bg-white font-sans text-tekst antialiased;
   }
 
-  /* Zichtbare focus voor toetsenbordgebruikers, overal. */
-  :focus-visible {
-    @apply outline-none ring-2 ring-primair-licht ring-offset-2;
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
+  }
+
+  /* Zichtbare focus voor toetsenbordgebruikers, overal — exact zoals
+     Productie/Huisstijl/huisstijl-web.css: focus is niet onderhandelbaar. */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid theme("colors.focus");
+    outline-offset: 2px;
   }
 }
 

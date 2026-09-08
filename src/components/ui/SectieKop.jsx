@@ -34,7 +34,7 @@ export default function SectieKop({
       {lede && (
         <p
           className={`mt-4 text-base sm:text-lg ${
-            donker ? "text-[#DFEAF2]" : "text-gedempt"
+            donker ? "text-[#CDE8E6]" : "text-gedempt"
           }`}
         >
           {lede}

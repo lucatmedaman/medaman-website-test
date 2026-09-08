@@ -30,12 +30,12 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-primair-diep pb-6 pt-14 text-sm text-[#DFEAF2]">
+      <div className="bg-primair-diep pb-6 pt-14 text-sm text-[#CDE8E6]">
         <div className="mx-auto w-full max-w-[1160px] px-4 sm:px-6">
           <div className="grid gap-8 pb-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
             <div>
               <span className="text-lg font-bold text-white">Medaman</span>
-              <p className="mt-3 max-w-[26ch] text-[#DFEAF2]/75">{site.tagline}</p>
+              <p className="mt-3 max-w-[26ch] text-[#CDE8E6]/75">{site.tagline}</p>
             </div>
 
             <nav aria-label="Wie is Medaman">
@@ -83,7 +83,7 @@ export default function Footer() {
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent-licht">
                 Contact
               </h2>
-              <address className="not-italic leading-loose text-[#DFEAF2]/85 [&_.placeholder]:border-[#DFEAF2]/35 [&_.placeholder]:text-[#DFEAF2]/60">
+              <address className="not-italic leading-loose text-[#CDE8E6]/85 [&_.placeholder]:border-[#CDE8E6]/35 [&_.placeholder]:text-[#CDE8E6]/60">
                 <Placeholder
                   waarde={c.email}
                   href={isPlaceholder(c.email) ? undefined : `mailto:${c.email}`}
@@ -101,7 +101,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <p className="border-t border-white/15 pt-4 text-xs text-[#DFEAF2]/50">
+          <p className="border-t border-white/15 pt-4 text-xs text-[#CDE8E6]/50">
             {site.testBanner}
           </p>
         </div>

@@ -27,7 +27,7 @@ export default function Home() {
         className="relative flex min-h-[420px] items-center bg-cover bg-center py-16 md:min-h-[520px] md:py-24"
         style={{ backgroundImage: "url(/images/hero-arts-tablet.jpg)" }}
       >
-        <div className="absolute inset-0 bg-[#1B2A33]/60" aria-hidden="true" />
+        <div className="absolute inset-0 bg-primair-diep/65" aria-hidden="true" />
         <div className="relative mx-auto w-full max-w-[1160px] px-4 text-center sm:px-6">
           <span className="mb-3 block text-sm font-medium uppercase tracking-[0.12em] text-white/85">
             Ontsluit het potentiëel van uw ziekenhuisgegevens!

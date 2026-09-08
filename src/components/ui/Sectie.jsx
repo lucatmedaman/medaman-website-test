@@ -1,7 +1,7 @@
 const achtergronden = {
   wit: "bg-white",
   zacht: "bg-zacht border-y border-rand",
-  donker: "bg-primair text-[#DFEAF2]",
+  donker: "bg-primair-diep text-[#CDE8E6]",
 };
 
 /** Sectiewrapper met vaste verticale ritmiek en een container eromheen. */

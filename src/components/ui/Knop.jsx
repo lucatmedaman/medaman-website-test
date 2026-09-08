@@ -4,7 +4,7 @@ const varianten = {
   primair: "bg-primair text-white border-primair hover:bg-primair-diep hover:border-primair-diep",
   secundair:
     "bg-transparent text-primair border-rand-sterk hover:border-primair hover:bg-zacht",
-  opDonker: "bg-white text-primair border-white hover:bg-[#DFEAF2]",
+  opDonker: "bg-white text-primair border-white hover:bg-teal-100",
   lijnOpDonker:
     "bg-transparent text-white border-white/45 hover:border-white hover:bg-white/10",
 };

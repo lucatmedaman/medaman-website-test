@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Link2 } from "lucide-react";
-import Logo from "../ui/Logo";
 import { site } from "../../data/site";
 
 const navKlasse = ({ isActive }) =>
@@ -91,13 +90,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-rand bg-white">
-      <p className="bg-primair-diep px-4 py-1 text-center text-xs text-[#DFEAF2]">
+      <p className="bg-primair-diep px-4 py-1 text-center text-xs text-[#CDE8E6]">
         {site.testBanner}
       </p>
 
       <div className="mx-auto flex w-full max-w-[1160px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link to="/" className="no-underline" aria-label={`${site.naam} — naar de startpagina`}>
-          <Logo />
+          <img src="/images/logo-medaman.png" alt={site.naam} className="h-8 w-auto" />
         </Link>
 
         <button

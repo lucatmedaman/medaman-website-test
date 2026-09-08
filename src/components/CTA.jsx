@@ -13,7 +13,7 @@ export default function CTA({
           <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             {titel}
           </h2>
-          {tekst && <p className="mt-3 text-[#DFEAF2]">{tekst}</p>}
+          {tekst && <p className="mt-3 text-[#CDE8E6]">{tekst}</p>}
         </div>
         <div className="flex flex-wrap gap-3">
           <Knop to="/contact" variant="opDonker">
