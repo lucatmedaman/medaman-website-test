@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Logo from "../ui/Logo";
 import Placeholder from "../ui/Placeholder";
 import { site, isPlaceholder } from "../../data/site";
 import { diensten } from "../../data/diensten";
@@ -13,7 +12,11 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-[1160px] px-4 sm:px-6">
         <div className="grid gap-8 pb-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           <div>
-            <Logo variant="licht" />
+            <img
+              src="/images/logo-medaman.png"
+              alt="Medaman"
+              className="h-8 w-auto rounded bg-white/95 px-2 py-1"
+            />
             <p className="mt-3 max-w-[26ch] text-[#DFEAF2]/75">{site.tagline}</p>
           </div>
 
@@ -78,6 +81,19 @@ export default function Footer() {
               />
             </address>
           </div>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-6 border-t border-white/15 pt-6">
+          <img
+            src="/images/badge-ehden.png"
+            alt="EHDEN Certified SME 2021"
+            className="h-10 w-auto rounded bg-white/95 px-2 py-1"
+          />
+          <img
+            src="/images/badge-eihd.png"
+            alt="Member of The European Institute For Innovation Through Health Data"
+            className="h-10 w-auto rounded bg-white/95 px-2 py-1"
+          />
         </div>
 
         <div className="flex flex-wrap justify-between gap-x-6 gap-y-3 border-t border-white/15 pt-4 text-xs text-[#DFEAF2]/65">
