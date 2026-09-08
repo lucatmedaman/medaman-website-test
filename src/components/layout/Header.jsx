@@ -133,14 +133,6 @@ export default function Header() {
                 </li>
               ),
             )}
-            <li className="pt-4 lg:pt-0">
-              <Link
-                to="/contact"
-                className="flex items-center justify-center rounded border border-primair bg-primair px-5 py-2.5 text-sm font-semibold text-white no-underline transition-colors hover:bg-primair-diep lg:inline-flex"
-              >
-                Gesprek aanvragen
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>
