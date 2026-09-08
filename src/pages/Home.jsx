@@ -1,10 +1,18 @@
 import Sectie from "../components/ui/Sectie";
-import SectieKop from "../components/ui/SectieKop";
 import Kaart from "../components/ui/Kaart";
 import Knop from "../components/ui/Knop";
 import CTA from "../components/CTA";
 import useDocumentTitel from "../hooks/useDocumentTitel";
 import { diensten } from "../data/diensten";
+import { Smartphone, PanelTop, Paintbrush, Puzzle } from "lucide-react";
+
+/** Iconen zoals op de live site, per dienst-slug. */
+const EXPERTISE_ICONS = {
+  feedback: Smartphone,
+  "clinical-documentation-improvement": PanelTop,
+  "data-analyse": Paintbrush,
+  codeerondersteuning: Puzzle,
+};
 
 export default function Home() {
   useDocumentTitel(
@@ -84,17 +92,23 @@ export default function Home() {
       </Sectie>
 
       <Sectie>
-        <SectieKop
-          eyebrow="Expertise"
-          titel="Hoe kunnen wij u helpen"
-          className="mb-8"
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {diensten.map((d) => (
-            <Kaart key={d.slug} to="/wie-is-medaman">
-              <h3 className="text-base font-semibold text-primair">{d.titel}</h3>
-            </Kaart>
-          ))}
+        <div className="mb-10 text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-accent sm:text-5xl">
+            EXPERTISE
+          </h2>
+          <p className="mt-3 text-xl text-gedempt">Hoe kunnen wij u helpen</p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {diensten.map((d) => {
+            const Icoon = EXPERTISE_ICONS[d.slug];
+            return (
+              <Kaart key={d.slug}>
+                {Icoon && <Icoon className="h-8 w-8 text-accent" strokeWidth={1.5} aria-hidden="true" />}
+                <h3 className="text-xl font-semibold text-primair">{d.titel}</h3>
+                <p className="text-gedempt">{d.tekst}</p>
+              </Kaart>
+            );
+          })}
         </div>
       </Sectie>
 
