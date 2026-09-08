@@ -91,7 +91,10 @@ export const slotpunten = [
 
 /** Links-pagina — GEEN Notion-bron gevonden, nog gebaseerd op eerdere screenshots. */
 export const links = [
-  { label: "Opladen gegevens", href: "[[url nog te bevestigen]]" },
-  { label: "ICD-10-BE", href: "[[url nog te bevestigen]]" },
-  { label: "Terminologiecentrum Fod Health", href: "[[url nog te bevestigen]]" },
+  { label: "Opladen gegevens", href: "https://liquidfiles.medamanproduction.org/filedrop/General" },
+  { label: "ICD-10-BE", href: "https://icd10be.health.belgium.be/default.php" },
+  {
+    label: "Terminologiecentrum Fod Health",
+    href: "https://apps.health.belgium.be/terminology-portal/standards/classification_standards/icd/nl",
+  },
 ];
