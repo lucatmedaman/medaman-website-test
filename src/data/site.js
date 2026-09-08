@@ -31,7 +31,14 @@ export const site = {
     "Testversie — dit is een preview en niet de officiële website van Medaman.",
 
   navigatie: [
-    { to: "/voor-wie", label: "Voor wie" },
+    {
+      to: "/voor-wie",
+      label: "Voor wie",
+      children: [
+        { to: "/voor-wie", label: "Voor wie" },
+        { to: "/voordelen", label: "Voordelen" },
+      ],
+    },
     { to: "/wie-is-medaman", label: "Wie is Medaman" },
     { to: "/contact", label: "Contact" },
     { to: "/links", label: "Links" },
