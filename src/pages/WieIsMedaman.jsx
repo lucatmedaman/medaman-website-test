@@ -86,7 +86,7 @@ export default function WieIsMedaman() {
         </ul>
       </Sectie>
 
-      <Sectie>
+      <Sectie id="missie-visie">
         <SectieKop eyebrow="Missie & visie" titel="Onze focus" className="mb-8" />
         <div className="grid gap-8 lg:grid-cols-2">
           <div>

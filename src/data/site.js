@@ -39,7 +39,15 @@ export const site = {
         { to: "/voordelen", label: "Voordelen" },
       ],
     },
-    { to: "/wie-is-medaman", label: "Wie is Medaman" },
+    {
+      to: "/wie-is-medaman",
+      label: "Wie is Medaman",
+      children: [
+        { to: "/wie-is-medaman#over-ons", label: "Wie we zijn" },
+        { to: "/wie-is-medaman#expertise", label: "Diensten" },
+        { to: "/wie-is-medaman#missie-visie", label: "Missie & Visie" },
+      ],
+    },
     { to: "/contact", label: "Contact" },
     { to: "/links", label: "Links" },
   ],
