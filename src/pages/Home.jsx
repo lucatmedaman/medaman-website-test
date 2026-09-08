@@ -25,7 +25,7 @@ export default function Home() {
               Ontsluit het potentiëel van uw ziekenhuisgegevens!
             </h1>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Knop to="/wie-is-medaman">Wie is Medaman</Knop>
+              <Knop href="#over-ons">Wie is Medaman</Knop>
               <Knop to="/contact" variant="secundair">
                 Contact
               </Knop>
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Sectie>
+      <Sectie id="over-ons">
         <SectieKop
           eyebrow="Over ons"
           titel="Wie we zijn en wat we doen"
