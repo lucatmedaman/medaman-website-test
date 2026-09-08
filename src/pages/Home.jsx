@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         <div className="grid gap-10">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
             <p className="text-gedempt lg:order-1">
               MEDAMAN is een organisatie die diensten verleent aan ziekenhuizen die
               innovatie naar een nog hoger niveau willen brengen. Uit gestructureerde
@@ -61,23 +61,23 @@ export default function Home() {
               en op een gebruiksvriendelijke manier ter beschikking gesteld met het oog
               op kwaliteitsvollere zorg.
             </p>
-            <div className="overflow-hidden rounded-md border border-rand lg:order-2">
+            <div className="overflow-hidden rounded-md border border-rand lg:order-2 lg:h-full">
               <img
                 src="/images/over-ons-laptop.jpg"
                 alt="Arts typt op een laptop, met rapportages en een stethoscoop op tafel"
-                className="h-full w-full object-cover"
+                className="h-full min-h-[260px] w-full object-cover"
                 width="1600"
                 height="1064"
               />
             </div>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            <div className="overflow-hidden rounded-md border border-rand lg:order-1">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
+            <div className="overflow-hidden rounded-md border border-rand lg:order-1 lg:h-full">
               <img
                 src="/images/over-ons-dashboard.jpg"
                 alt="Laptop met een dashboard van ziekenhuisdata-analyses"
-                className="h-full w-full object-cover"
+                className="h-full min-h-[260px] w-full object-cover"
                 width="1600"
                 height="1067"
               />
@@ -122,12 +122,12 @@ export default function Home() {
         </div>
 
         <div className="grid gap-10">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            <div className="overflow-hidden rounded-md border border-rand lg:order-1">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
+            <div className="overflow-hidden rounded-md border border-rand lg:order-1 lg:h-full">
               <img
                 src="/images/missie-armen.jpg"
                 alt="Zorgverlener met gekruiste armen en stethoscoop"
-                className="h-full w-full object-cover"
+                className="h-full min-h-[260px] w-full object-cover"
                 width="1600"
                 height="1067"
               />
@@ -143,7 +143,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
             <div className="lg:order-1">
               <h3 className="mb-2 text-2xl font-semibold text-primair">Onze Visie</h3>
               <p className="text-gedempt">
@@ -153,11 +153,11 @@ export default function Home() {
                 de zorg met meer doelgerichte patiëntenzorg tot gevolg.
               </p>
             </div>
-            <div className="overflow-hidden rounded-md border border-rand lg:order-2">
+            <div className="overflow-hidden rounded-md border border-rand lg:order-2 lg:h-full">
               <img
                 src="/images/visie-team.jpg"
                 alt="Drie zorgverleners bekijken samen medische beeldvorming"
-                className="h-full w-full object-cover"
+                className="h-full min-h-[260px] w-full object-cover"
                 width="1600"
                 height="1068"
               />

@@ -28,7 +28,7 @@ export default function WieIsMedaman() {
           titel="Wie we zijn en wat we doen"
           className="mb-8"
         />
-        <div className="grid items-center gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
           <div className="space-y-4">
             <p className="text-gedempt">
               MEDAMAN is een organisatie die diensten verleent aan ziekenhuizen die
@@ -45,11 +45,11 @@ export default function WieIsMedaman() {
               zorgregistratiecyclus.
             </p>
           </div>
-          <div className="overflow-hidden rounded-md border border-rand">
+          <div className="overflow-hidden rounded-md border border-rand lg:h-full">
             <img
               src="/images/over-ons-team.jpg"
               alt="Zorgverleners bekijken samen medische beeldvorming"
-              className="h-full w-full object-cover"
+              className="h-full min-h-[260px] w-full object-cover"
               width="1600"
               height="1068"
             />
@@ -109,7 +109,7 @@ export default function WieIsMedaman() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-8 border-t border-rand pt-8 lg:grid-cols-2 lg:items-center">
+        <div className="mt-10 grid gap-8 border-t border-rand pt-8 lg:grid-cols-2 lg:items-stretch">
           <ul className="grid gap-4">
             {slotpunten.map((p) => (
               <li key={p} className="flex gap-3 text-[0.95rem] text-gedempt">
@@ -118,11 +118,11 @@ export default function WieIsMedaman() {
               </li>
             ))}
           </ul>
-          <div className="overflow-hidden rounded-md border border-rand">
+          <div className="overflow-hidden rounded-md border border-rand lg:h-full">
             <img
               src="/images/visie-team.jpg"
               alt="Drie zorgverleners bekijken samen medische beeldvorming"
-              className="h-full w-full object-cover"
+              className="h-full min-h-[260px] w-full object-cover"
               width="1600"
               height="1068"
             />

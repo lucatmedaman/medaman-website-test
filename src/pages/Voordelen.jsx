@@ -20,15 +20,15 @@ function VinkLijst({ items }) {
 
 function BeeldBlok({ items, src, alt, breedte, hoogte, omgekeerd = false }) {
   return (
-    <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+    <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
       <div className={omgekeerd ? "lg:order-2" : "lg:order-1"}>
         <VinkLijst items={items} />
       </div>
-      <div className={`overflow-hidden rounded-md border border-rand ${omgekeerd ? "lg:order-1" : "lg:order-2"}`}>
+      <div className={`overflow-hidden rounded-md border border-rand lg:h-full ${omgekeerd ? "lg:order-1" : "lg:order-2"}`}>
         <img
           src={src}
           alt={alt}
-          className="h-full w-full object-cover"
+          className="h-full min-h-[260px] w-full object-cover"
           width={breedte}
           height={hoogte}
         />
