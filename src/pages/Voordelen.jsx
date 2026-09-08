@@ -56,14 +56,7 @@ export default function Voordelen() {
       <Sectie>
         <div className="grid gap-14">
           <BeeldBlok
-            items={voordelen.slice(0, 4)}
-            src="/images/voordelen-1.jpg"
-            alt="Stethoscoop naast een tablet met handgeschreven notities"
-            breedte="1600"
-            hoogte="1937"
-          />
-          <BeeldBlok
-            items={voordelen.slice(4, 7)}
+            items={voordelen.slice(0, 7)}
             src="/images/voordelen-2.jpg"
             alt="Bloeddrukmeting met klembord en rapportageschema"
             breedte="1600"
