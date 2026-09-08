@@ -27,6 +27,16 @@ export default function Contact() {
           <ContactFormulier />
 
           <aside aria-label="Contactgegevens" className="grid gap-4">
+            <div className="overflow-hidden rounded-md border border-rand">
+              <img
+                src="/images/contact-rapportage.jpg"
+                alt="Rapportage en laptop op tafel"
+                className="h-full w-full object-cover"
+                width="1600"
+                height="1043"
+              />
+            </div>
+
             <div className="rounded-md border border-rand p-5">
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent">
                 Bel ons

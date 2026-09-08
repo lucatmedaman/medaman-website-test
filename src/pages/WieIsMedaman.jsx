@@ -27,21 +27,32 @@ export default function WieIsMedaman() {
           titel="Wie we zijn en wat we doen"
           className="mb-8"
         />
-        <div className="grid gap-6 lg:grid-cols-2">
-          <p className="text-gedempt">
-            MEDAMAN is een organisatie die diensten verleent aan ziekenhuizen die
-            innovatie naar een nog hoger niveau willen brengen. Uit gestructureerde
-            ziekenhuisgegevens die in verschillende bronnen beschikbaar zijn, wordt de
-            meest relevante informatie voor zorgverleners gecreëerd. Deze worden snel
-            en op een gebruiksvriendelijke manier ter beschikking gesteld met het oog
-            op kwaliteitsvollere zorg.
-          </p>
-          <p className="text-gedempt">
-            Het bedrijf werd reeds opgericht in 2019 door Dr. Luc Belmans, een arts
-            die reeds zijn sporen verdiend heeft in het ziekenhuisbeheer! De diensten
-            van MEDAMAN omvatten een volledige ondersteuning van de
-            zorgregistratiecyclus.
-          </p>
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          <div className="space-y-4">
+            <p className="text-gedempt">
+              MEDAMAN is een organisatie die diensten verleent aan ziekenhuizen die
+              innovatie naar een nog hoger niveau willen brengen. Uit gestructureerde
+              ziekenhuisgegevens die in verschillende bronnen beschikbaar zijn, wordt de
+              meest relevante informatie voor zorgverleners gecreëerd. Deze worden snel
+              en op een gebruiksvriendelijke manier ter beschikking gesteld met het oog
+              op kwaliteitsvollere zorg.
+            </p>
+            <p className="text-gedempt">
+              Het bedrijf werd reeds opgericht in 2019 door Dr. Luc Belmans, een arts
+              die reeds zijn sporen verdiend heeft in het ziekenhuisbeheer! De diensten
+              van MEDAMAN omvatten een volledige ondersteuning van de
+              zorgregistratiecyclus.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-md border border-rand">
+            <img
+              src="/images/over-ons-team.jpg"
+              alt="Zorgverleners bekijken samen medische beeldvorming"
+              className="h-full w-full object-cover"
+              width="1600"
+              height="1068"
+            />
+          </div>
         </div>
       </Sectie>
 

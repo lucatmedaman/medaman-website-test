@@ -2,7 +2,6 @@ import Sectie from "../components/ui/Sectie";
 import SectieKop from "../components/ui/SectieKop";
 import Kaart from "../components/ui/Kaart";
 import Knop from "../components/ui/Knop";
-import DataVisual from "../components/DataVisual";
 import CTA from "../components/CTA";
 import useDocumentTitel from "../hooks/useDocumentTitel";
 import { diensten } from "../data/diensten";
@@ -32,8 +31,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-md border border-rand bg-white p-6 sm:p-8">
-            <DataVisual />
+          <div className="overflow-hidden rounded-md border border-rand">
+            <img
+              src="/images/hero-arts-tablet.jpg"
+              alt="Arts bekijkt ziekenhuisgegevens op een tablet"
+              className="h-full w-full object-cover"
+              width="1600"
+              height="1063"
+            />
           </div>
         </div>
       </section>
