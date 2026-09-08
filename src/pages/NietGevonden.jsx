@@ -30,13 +30,13 @@ export default function NietGevonden() {
 
         <div className="mt-12 border-t border-rand pt-5">
           <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.12em] text-accent">
-            Diensten
+            Wie is Medaman
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {diensten.map((d) => (
               <li key={d.slug}>
                 <Link
-                  to={`/diensten#${d.slug}`}
+                  to={`/wie-is-medaman#${d.slug}`}
                   className="font-medium no-underline hover:underline"
                 >
                   {d.titel}

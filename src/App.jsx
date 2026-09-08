@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
-import Diensten from "./pages/Diensten";
-import OverOns from "./pages/OverOns";
+import VoorWie from "./pages/VoorWie";
+import WieIsMedaman from "./pages/WieIsMedaman";
 import Contact from "./pages/Contact";
-import GeriatrischDaghospitaal from "./pages/GeriatrischDaghospitaal";
+import Links from "./pages/Links";
 import NietGevonden from "./pages/NietGevonden";
 
 export default function App() {
@@ -12,13 +12,10 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="diensten" element={<Diensten />} />
-        <Route path="over-ons" element={<OverOns />} />
+        <Route path="voor-wie" element={<VoorWie />} />
+        <Route path="wie-is-medaman" element={<WieIsMedaman />} />
         <Route path="contact" element={<Contact />} />
-        <Route
-          path="geriatrisch-daghospitaal"
-          element={<GeriatrischDaghospitaal />}
-        />
+        <Route path="links" element={<Links />} />
         <Route path="*" element={<NietGevonden />} />
       </Route>
     </Routes>
