@@ -64,6 +64,17 @@ export default function Contact() {
                 />
               </p>
             </div>
+
+            <div className="rounded-md border border-rand p-5">
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+                Adres
+              </h2>
+              <address className="not-italic font-medium leading-relaxed">
+                {c.straat}
+                <br />
+                {c.postcode} {c.gemeente}, {c.land}
+              </address>
+            </div>
           </aside>
         </div>
       </Sectie>

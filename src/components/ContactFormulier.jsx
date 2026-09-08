@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { formulier, site, isPlaceholder } from "../data/site";
+import { formulier } from "../data/site";
 
 const LEEG = {
   email: "",
@@ -28,18 +28,16 @@ function valideer(waarden) {
 
 const veldKlasse = (fout) =>
   `w-full rounded border px-3 py-2.5 text-[0.97rem] text-tekst focus:border-primair-licht focus:outline-none focus:ring-2 focus:ring-primair-licht/35 ${
-    fout ? "border-[#B3261E]" : "border-rand-sterk"
+    fout ? "border-fout" : "border-rand-sterk"
   }`;
 
 export default function ContactFormulier() {
   const [waarden, setWaarden] = useState(LEEG);
   const [fouten, setFouten] = useState({});
   const [geprobeerd, setGeprobeerd] = useState(false);
-  const [verzonden, setVerzonden] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | bezig | verzonden | mislukt
+  const [serverFout, setServerFout] = useState("");
   const formRef = useRef(null);
-
-  const gekoppeld = formulier.endpoint !== null;
-  const emailBekend = !isPlaceholder(site.contact.email);
 
   const wijzig = (e) => {
     const { name, value } = e.target;
@@ -48,38 +46,49 @@ export default function ContactFormulier() {
     if (geprobeerd) setFouten(valideer(nieuw));
   };
 
-  const verzend = (e) => {
+  const verzend = async (e) => {
     e.preventDefault();
     setGeprobeerd(true);
+    setServerFout("");
 
     const nieuweFouten = valideer(waarden);
     setFouten(nieuweFouten);
 
-    const eerste = Object.keys(nieuweFouten)[0];
-    if (eerste) {
-      const veld = formRef.current?.elements[eerste];
+    const eersteVeld = Object.keys(nieuweFouten)[0];
+    if (eersteVeld) {
+      const veld = formRef.current?.elements[eersteVeld];
       veld?.focus();
       veld?.scrollIntoView({ block: "center", behavior: "smooth" });
       return;
     }
 
-    if (waarden.website) {
+    setStatus("bezig");
+    try {
+      const respons = await fetch(formulier.endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(waarden),
+      });
+      const data = await respons.json().catch(() => ({}));
+
+      if (!respons.ok || !data.ok) {
+        setServerFout(data.fout || "Versturen is mislukt. Probeer later opnieuw.");
+        setStatus("mislukt");
+        return;
+      }
+
       setWaarden(LEEG);
-      setVerzonden(true);
-      return;
+      setGeprobeerd(false);
+      setStatus("verzonden");
+    } catch {
+      setServerFout("Kon geen verbinding maken. Controleer uw internetverbinding.");
+      setStatus("mislukt");
     }
-
-    if (!gekoppeld) {
-      setVerzonden(true);
-      return;
-    }
-
-    formRef.current.submit();
   };
 
   const Fout = ({ veld }) =>
     fouten[veld] ? (
-      <span id={`fout-${veld}`} className="text-[0.87rem] font-medium text-[#B3261E]">
+      <span id={`fout-${veld}`} className="text-[0.87rem] font-medium text-fout">
         {fouten[veld]}
       </span>
     ) : null;
@@ -90,14 +99,7 @@ export default function ContactFormulier() {
   });
 
   return (
-    <form
-      ref={formRef}
-      onSubmit={verzend}
-      method="post"
-      action={formulier.endpoint ?? undefined}
-      noValidate
-      className="max-w-[560px]"
-    >
+    <form ref={formRef} onSubmit={verzend} noValidate className="max-w-[560px]">
       <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
         <label htmlFor="website">Vul dit veld niet in</label>
         <input
@@ -163,28 +165,24 @@ export default function ContactFormulier() {
 
       <button
         type="submit"
-        className="mt-5 inline-flex items-center justify-center rounded border border-primair bg-primair px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primair-diep"
+        disabled={status === "bezig"}
+        className="mt-5 inline-flex items-center justify-center rounded border border-primair bg-primair px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primair-diep disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Verzenden
+        {status === "bezig" ? "Bezig met verzenden…" : "Verzenden"}
       </button>
 
       <p role="status" aria-live="polite">
-        {verzonden && (
-          <span className="mt-4 block rounded border border-accent bg-accent-zacht p-4 text-[0.93rem]">
-            Alles is correct ingevuld, maar in deze testversie is het formulier nog niet
-            aan een mailbox gekoppeld.
-            {emailBekend ? ` Stuur uw vraag zolang naar ${site.contact.email}.` : ""}
+        {status === "verzonden" && (
+          <span className="mt-4 block rounded border border-succes bg-succes-vlak p-4 text-[0.93rem]">
+            Bedankt, uw bericht is verzonden. We nemen zo snel mogelijk contact op.
+          </span>
+        )}
+        {status === "mislukt" && (
+          <span className="mt-4 block rounded border border-fout bg-fout-vlak p-4 text-[0.93rem]">
+            {serverFout}
           </span>
         )}
       </p>
-
-      {!gekoppeld && (
-        <p className="mt-5 border-l-[3px] border-accent bg-zacht p-4 text-[0.9rem] text-gedempt">
-          <strong className="text-primair">Let op:</strong> dit is v1 zonder
-          backend-koppeling. Het formulier valideert wel volledig, maar verzendt nog
-          niets. Koppelen gebeurt op één plek in <code>src/data/site.js</code>.
-        </p>
-      )}
     </form>
   );
 }

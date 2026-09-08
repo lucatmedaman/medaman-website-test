@@ -25,7 +25,8 @@ export default function Footer() {
         </div>
         <div className="mx-auto mt-6 w-full max-w-[1160px] px-4 sm:px-6">
           <p className="text-xs text-gedempt">
-            Copyright © 2018-{jaar} {site.naam}. All rights reserved.
+            Copyright © 2018-{jaar} {site.naam}. All rights reserved. — Ondernemingsnummer{" "}
+            {c.ondernemingsnummer}
           </p>
         </div>
       </div>
@@ -97,6 +98,10 @@ export default function Footer() {
                       : `tel:${c.telefoon.replace(/\s/g, "")}`
                   }
                 />
+                <br />
+                {c.straat}
+                <br />
+                {c.postcode} {c.gemeente}
               </address>
             </div>
           </div>

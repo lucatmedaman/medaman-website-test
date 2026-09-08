@@ -19,11 +19,11 @@ export const site = {
   contact: {
     email: "info@medaman.be",
     telefoon: "+32 14 96 04 37",
-    straat: "[[Straatnaam 1]]",
-    postcode: "[[9160]]",
-    gemeente: "[[gemeente]]",
+    straat: "Diamantstraat 8 bus 340",
+    postcode: "2200",
+    gemeente: "Herentals",
     land: "België",
-    ondernemingsnummer: "[[BE 0000.000.000]]",
+    ondernemingsnummer: "BE0719.426.234",
   },
 
   /** Zichtbaar bovenaan elke pagina zolang dit een testomgeving is. */
@@ -62,5 +62,5 @@ export const site = {
  *   Vercel function      → endpoint: '/api/contact'
  */
 export const formulier = {
-  endpoint: null,
+  endpoint: "/api/contact",
 };
