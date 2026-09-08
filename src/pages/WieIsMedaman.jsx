@@ -21,6 +21,30 @@ export default function WieIsMedaman() {
         huidig="Wie is Medaman"
       />
 
+      <Sectie id="over-ons">
+        <SectieKop
+          eyebrow="Over ons"
+          titel="Wie we zijn en wat we doen"
+          className="mb-8"
+        />
+        <div className="grid gap-6 lg:grid-cols-2">
+          <p className="text-gedempt">
+            MEDAMAN is een organisatie die diensten verleent aan ziekenhuizen die
+            innovatie naar een nog hoger niveau willen brengen. Uit gestructureerde
+            ziekenhuisgegevens die in verschillende bronnen beschikbaar zijn, wordt de
+            meest relevante informatie voor zorgverleners gecreëerd. Deze worden snel
+            en op een gebruiksvriendelijke manier ter beschikking gesteld met het oog
+            op kwaliteitsvollere zorg.
+          </p>
+          <p className="text-gedempt">
+            Het bedrijf werd reeds opgericht in 2019 door Dr. Luc Belmans, een arts
+            die reeds zijn sporen verdiend heeft in het ziekenhuisbeheer! De diensten
+            van MEDAMAN omvatten een volledige ondersteuning van de
+            zorgregistratiecyclus.
+          </p>
+        </div>
+      </Sectie>
+
       <Sectie id="expertise">
         <SectieKop eyebrow="Expertise" titel="Hoe kunnen wij u helpen" className="mb-8" />
         <div className="grid gap-6 sm:grid-cols-2">
