@@ -3,8 +3,8 @@ import Knop from "./ui/Knop";
 
 /** Herbruikbaar donker CTA-blok onderaan de pagina's. */
 export default function CTA({
-  titel = "Een concrete vraag over uw cijfers?",
-  tekst = "Een kennismakingsgesprek van een half uur volstaat meestal om te bepalen of uw data de vraag kan beantwoorden en wat een analyse zou inhouden.",
+  titel = "Contacteer ons nu voor meer informatie!",
+  tekst = "",
 }) {
   return (
     <Sectie variant="donker">
@@ -13,14 +13,14 @@ export default function CTA({
           <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             {titel}
           </h2>
-          <p className="mt-3 text-[#DFEAF2]">{tekst}</p>
+          {tekst && <p className="mt-3 text-[#DFEAF2]">{tekst}</p>}
         </div>
         <div className="flex flex-wrap gap-3">
           <Knop to="/contact" variant="opDonker">
             Contact opnemen
           </Knop>
-          <Knop to="/diensten" variant="lijnOpDonker">
-            Diensten bekijken
+          <Knop to="/wie-is-medaman" variant="lijnOpDonker">
+            Wie is Medaman
           </Knop>
         </div>
       </div>

@@ -17,15 +17,15 @@ export default function Footer() {
             <p className="mt-3 max-w-[26ch] text-[#DFEAF2]/75">{site.tagline}</p>
           </div>
 
-          <nav aria-label="Diensten">
+          <nav aria-label="Wie is Medaman">
             <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent-licht">
-              Diensten
+              Wie is Medaman
             </h2>
             <ul className="grid gap-2">
               {diensten.map((d) => (
                 <li key={d.slug}>
                   <Link
-                    to={`/diensten#${d.slug}`}
+                    to={`/wie-is-medaman#${d.slug}`}
                     className="no-underline hover:text-white hover:underline"
                   >
                     {d.titel}
@@ -41,8 +41,8 @@ export default function Footer() {
             </h2>
             <ul className="grid gap-2">
               <li>
-                <Link to="/over-ons" className="no-underline hover:text-white hover:underline">
-                  Over ons
+                <Link to="/voor-wie" className="no-underline hover:text-white hover:underline">
+                  Voor wie
                 </Link>
               </li>
               <li>
@@ -50,18 +50,9 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-            </ul>
-
-            <h2 className="mb-3 mt-6 text-xs font-semibold uppercase tracking-[0.12em] text-accent-licht">
-              Kennis
-            </h2>
-            <ul className="grid gap-2">
               <li>
-                <Link
-                  to="/geriatrisch-daghospitaal"
-                  className="no-underline hover:text-white hover:underline"
-                >
-                  Geriatrisch daghospitaal
+                <Link to="/links" className="no-underline hover:text-white hover:underline">
+                  Links
                 </Link>
               </li>
             </ul>
@@ -72,10 +63,6 @@ export default function Footer() {
               Contact
             </h2>
             <address className="not-italic leading-loose text-[#DFEAF2]/85 [&_.placeholder]:border-[#DFEAF2]/35 [&_.placeholder]:text-[#DFEAF2]/60">
-              <Placeholder waarde={c.straat} />
-              <br />
-              <Placeholder waarde={c.postcode} /> {c.gemeente}, {c.land}
-              <br />
               <Placeholder
                 waarde={c.email}
                 href={isPlaceholder(c.email) ? undefined : `mailto:${c.email}`}
@@ -94,10 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-between gap-x-6 gap-y-3 border-t border-white/15 pt-4 text-xs text-[#DFEAF2]/65">
-          <p className="[&_.placeholder]:border-[#DFEAF2]/35 [&_.placeholder]:text-[#DFEAF2]/60">
-            © {jaar} {site.naam}. Ondernemingsnummer{" "}
-            <Placeholder waarde={c.ondernemingsnummer} />.
-          </p>
+          <p>© {jaar} {site.naam}. All rights reserved.</p>
           <p className="text-[#DFEAF2]/50">{site.testBanner}</p>
         </div>
       </div>
