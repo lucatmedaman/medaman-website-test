@@ -105,10 +105,6 @@ export default function Footer() {
               </address>
             </div>
           </div>
-
-          <p className="border-t border-white/15 pt-4 text-xs text-[#CDE8E6]/50">
-            {site.testBanner}
-          </p>
         </div>
       </div>
     </footer>

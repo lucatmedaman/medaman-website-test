@@ -26,9 +26,6 @@ export const site = {
     ondernemingsnummer: "BE0719.426.234",
   },
 
-  /** Zichtbaar bovenaan elke pagina zolang dit een testomgeving is. */
-  testBanner:
-    "Testversie — dit is een preview en niet de officiële website van Medaman.",
 
   navigatie: [
     {

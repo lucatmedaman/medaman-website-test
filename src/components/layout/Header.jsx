@@ -90,10 +90,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-rand bg-white">
-      <p className="bg-primair-diep px-4 py-1 text-center text-xs text-[#CDE8E6]">
-        {site.testBanner}
-      </p>
-
       <div className="mx-auto flex w-full max-w-[1160px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link to="/" className="no-underline" aria-label={`${site.naam} — naar de startpagina`}>
           <img src="/images/logo-medaman.png" alt={site.naam} className="h-8 w-auto" />
