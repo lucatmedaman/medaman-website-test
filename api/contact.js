@@ -12,7 +12,7 @@ const DOEL_EMAIL = "luc.belmans@medaman.be";
 // Standaard-afzender van Resend; werkt zonder domeinverificatie/DNS-wijzigingen.
 // Kan later vervangen worden door bv. "Medaman website <website@medaman.be>"
 // zodra medaman.be geverifieerd is bij Resend (vraagt extra DNS-records).
-const AFZENDER = "Medaman website <onboarding@resend.dev>";
+const AFZENDER = "Medaman website <website@medaman.be>";
 
 function valideer(body) {
   const fouten = [];
