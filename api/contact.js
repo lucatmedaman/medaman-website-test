@@ -7,7 +7,7 @@
  * verder gewoon werken (client toont dan de foutmelding aan de gebruiker).
  */
 
-const DOEL_EMAIL = "Luc.belmans@medaman.be";
+const DOEL_EMAIL = "luc.belmans@medaman.be";
 
 // Standaard-afzender van Resend; werkt zonder domeinverificatie/DNS-wijzigingen.
 // Kan later vervangen worden door bv. "Medaman website <website@medaman.be>"
