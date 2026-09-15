@@ -22,6 +22,9 @@ export default function Footer() {
             alt="Member of The European Institute For Innovation Through Health Data"
             className="h-16 w-auto"
           />
+          <a href="https://bridge-network.eu/" target="_blank" rel="noopener noreferrer">
+            <img src="/images/badge-bridge-network.png" alt="Bridge Network" className="h-16 w-auto" />
+          </a>
         </div>
         <div className="mx-auto mt-6 w-full max-w-[1160px] px-4 sm:px-6">
           <p className="text-xs text-gedempt">
