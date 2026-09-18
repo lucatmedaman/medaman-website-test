@@ -6,6 +6,7 @@ import Voordelen from "./pages/Voordelen";
 import WieIsMedaman from "./pages/WieIsMedaman";
 import Contact from "./pages/Contact";
 import Links from "./pages/Links";
+import Cookiebeleid from "./pages/Cookiebeleid";
 import NietGevonden from "./pages/NietGevonden";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="wie-is-medaman" element={<WieIsMedaman />} />
         <Route path="contact" element={<Contact />} />
         <Route path="links" element={<Links />} />
+        <Route path="cookiebeleid" element={<Cookiebeleid />} />
         <Route path="*" element={<NietGevonden />} />
       </Route>
     </Routes>

@@ -18,9 +18,8 @@
     <meta name="theme-color" content="#10322F" />
     <!-- TEST-omgeving: niet indexeren zolang dit een preview is. -->
     <meta name="robots" content="noindex, nofollow" />
-    <!-- Cloudflare Web Analytics -->
-    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "72557b4892aa46f785c71ecebd9649d8"}'></script>
-    <!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics wordt niet meer statisch geladen: AnalyticsLoader.jsx
+         injecteert het script pas na analytics-toestemming (zie CookieConsent.jsx). -->
   </head>
   <body>
     <div id="root"></div>

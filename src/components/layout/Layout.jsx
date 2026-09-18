@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import ScrollNaarBoven from "./ScrollNaarBoven";
+import CookieConsent from "../CookieConsent";
+import AnalyticsLoader from "../AnalyticsLoader";
 
 export default function Layout() {
   return (
@@ -18,6 +20,8 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <CookieConsent />
+      <AnalyticsLoader />
     </div>
   );
 }

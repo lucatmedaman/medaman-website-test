@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Placeholder from "../ui/Placeholder";
 import { site, isPlaceholder } from "../../data/site";
 import { diensten } from "../../data/diensten";
+import { openCookievoorkeuren } from "../../hooks/useCookieConsent";
 
 export default function Footer() {
   const c = site.contact;
@@ -79,6 +80,23 @@ export default function Footer() {
                   <Link to="/links" className="no-underline hover:text-white hover:underline">
                     Links
                   </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/cookiebeleid"
+                    className="no-underline hover:text-white hover:underline"
+                  >
+                    Cookiebeleid
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={openCookievoorkeuren}
+                    className="text-left no-underline hover:text-white hover:underline"
+                  >
+                    Cookievoorkeuren
+                  </button>
                 </li>
               </ul>
             </nav>
